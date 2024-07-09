@@ -1,0 +1,23 @@
+{
+    "default": {
+        "dot": ".",
+        "dash": "-",
+        "code_space": " ",
+        "letter_space": "   ",
+        "word_space": "       "
+    },
+    "os and ones": {
+        "dot": "0",
+        "dash": "1",
+        "code_space": "+",
+        "letter_space": "-",
+        "word_space": "*"
+    },
+    "fancy default": {
+        "dot": ".dot.",
+        "dash": "-dash-",
+        "code_space": "' '",
+        "letter_space": "'. .'",
+        "word_space": "'. . . .'"
+    }
+}
