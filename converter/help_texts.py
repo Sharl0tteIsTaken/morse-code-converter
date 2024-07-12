@@ -13,7 +13,7 @@ command_text = "\
 "
 
 explain_text = "International Morse code is composed of five elements:\n\
-dot:            short mark, dot or di: one time unit long.\n\
+dot:            short mark, dot or dit: one time unit long.\n\
 dash:           long mark, dash or dah: three time units long.\n\
 inter gap:      inter-element gap between the dots and dashs within a character: one unit long.\n\
 short gap:      short gap (between letters): three time units long.\n\
