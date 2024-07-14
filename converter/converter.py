@@ -2,8 +2,14 @@
 # CODE_SPACE = ''
 # LETTER_SPACE = ' '
 # WORD_SPACE = ' / '
+from string import ascii_letters, digits, punctuation
 
 from converter.convert_tables import ConvertTables
+
+exclude = r'''#%*<>[\]^`{|}~'''
+for letter in exclude:
+    punctuation = punctuation.replace(letter, "")
+include_words = ascii_letters + digits + punctuation
 
 class Converter:
     """
@@ -107,10 +113,16 @@ class Converter:
         """
         output = ''
         for letter in user_input:
-            if letter == ' ':
-                output = output.rstrip(self.letter_space) + self.word_space
+            if letter == '\r':
                 continue
-            code = list(self.codes[letter.upper()])
-            output = output + self.code_space.join(code) + self.letter_space
+            elif letter == '\n':
+                output += '\n'
+            elif letter == ' ':
+                output = output.rstrip(self.letter_space) + self.word_space
+            elif letter in include_words:
+                code = list(self.codes[letter.upper()])
+                output = output + self.code_space.join(code) + self.letter_space
+            else:
+                output += f'(invalid_letter:{letter})'
         return output.rstrip(self.letter_space)
         
