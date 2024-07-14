@@ -3,10 +3,6 @@ import json
 from converter.convert_tables import ConvertTables
 from converter.help_texts import command_text, explain_text, available_text
 
-
-
-# path = '#100Days/day-82-morse_code_converter/converter/config.json'
-# TODO: change path potentionally with `os`
 path = 'converter/config.json'
 
 class Organizer():
